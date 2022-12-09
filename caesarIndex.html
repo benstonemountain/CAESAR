@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--defer: fentről lefele minden betölt, de a js csak minden után jön-->
+    <link rel="stylesheet" type="text/css" href="design.css">
+    <script src="main.js" defer type="module"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="background">
+            <div class="pic"></div>
+        </div>
+
+
+        <header>
+            <div class="head">
+                <h1>Caesar titkosító</h1>
+                <nav>
+                    <a href="/">Főoldal</a>
+                    <a href="/segitseg.html">Segítség</a>
+                    <a href="/">Akármi</a>
+                </nav>
+            </div>
+        </header>
+
+
+
+        <main>
+            <div class="boxes">
+                <!--Baloldali div: titkosítandó üzenet-->
+                <div id="left">
+                    <textarea id="user_message" placeholder="Titkosítandó üzenet.."></textarea>
+                </div>
+
+                <!--Középen a karakterkészlet, eltolás és a gombok-->
+                <div id="middle">
+                    <p> <input id="message_characters" type="text" placeholder="karakterkészlet, pl: aábcdAÁBCD"></p>
+
+                    <p class="eltolas">Eltolás mértéke:</p>
+                    <input id="message_offset" type="number" min="1">
+
+
+                    <div class="btns">
+                        <button id="kodol">Kódol &#8595</button>
+                        <button id="dekodol">Dekódol &#8593</button>
+                    </div>
+
+                    <div class="deleteBtn">
+                        <button id="torol">Töröl</button>
+                    </div>
+                </div>
+
+                <!--Jobb oldalon a titkosított szöveg-->
+                <div id="right">
+                    <textarea id="result_message" placeholder="A szöveg titkosított változata"></textarea>
+                </div>
+
+            </div>
+
+            <div>
+
+                <div class="process_cont">
+                    <div id="process_start"></div>
+                    <div>
+
+                        <div></div>
+                        <div></div>
+
+                    </div>
+                    <div id="process_end"></div>
+
+
+                </div>
+
+            </div>
+
+
+
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+
+</body>
+
+</html>
