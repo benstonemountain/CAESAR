@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'BIZ UDPMincho', serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "BIZ UDPMincho", serif;
 }
 
 html,
 body {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(245, 245, 214);
+  width: 100%;
+  height: 100%;
+  background-color: rgb(245, 245, 214);
 }
 
 /*a container szülő eleme a body
@@ -21,181 +21,165 @@ a benne lévő tartalom, DE!
 ha a body-nak adok magasságot, akkor a container magasságát a body-hoz képest meg tudom határozni
 */
 .container {
-    /* background-color: green;   */
-    width: 100%;
-    max-width: 1000px;
-    margin: auto;
+  /* background-color: green;   */
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
 }
 
-
 header {
-    
-    margin: 20px 0 20px 0;
-    /* border: 1px solid black; */
+  margin: 20px 0 20px 0;
+  /* border: 1px solid black; */
 }
 
 .head {
-
-    display: flex;
-    flex-direction: column;
-  
+  display: flex;
+  flex-direction: column;
 }
 nav {
-    /* border: 1px solid black; */
-    margin-top: 15px;
-    display: flex;
-    justify-content: space-evenly;
+  /* border: 1px solid black; */
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 header nav a {
-    font-family: 'Gideon Roman', cursive;
-    text-decoration: none;
-    color: black;
+  font-family: "Gideon Roman", cursive;
+  text-decoration: none;
+  color: black;
 }
 
 header nav a:hover {
-   font-size: 1.6rem;
-   transition: 1s;
+  font-size: 1.35rem;
+  transition: 0.5s;
 }
 
 h1 {
-    /* border: 1px solid black;  */
-    font-family: 'Gideon Roman', cursive;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-align: center;
+  /* border: 1px solid black;  */
+  font-family: "Gideon Roman", cursive;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
 }
 
 .background {
-    width: 100%;
-    height: 200px;
+  width: 100%;
+  height: 200px;
 }
 
 .background .pic {
-    height: 100%;
-    width: 100%;
-    background: url("pics/newrome.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  height: 100%;
+  width: 100%;
+  background: url("pics/newrome.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /*Űrlap mezők*/
 /*Űrlap mezők konténere*/
 .boxes {
-    width: 98%;
-    margin: auto;
+  width: 98%;
+  margin: auto;
 }
 
 #middle {
-    margin: 0 0 10px 0;
-    text-align: center;
+  margin: 0 0 10px 0;
+  text-align: center;
 }
 
 .eltolas {
-    margin: 10px 0 0 0;
-    font-size: .9rem;
+  margin: 10px 0 0 0;
+  font-size: 0.9rem;
 }
 
 #user_message,
 #result_message {
-    height: 100px;
-    width: 100%;
+  height: 100px;
+  width: 100%;
 }
 
 #message_offset {
-    width: 100px;
-    height: 25px;
-    margin: 2px 0 15px 0;
+  width: 100px;
+  height: 25px;
+  margin: 2px 0 15px 0;
 }
 
 #message_characters {
-    height: 25px;
-    max-width: 99%;
-    width: 280px;
+  height: 25px;
+  max-width: 99%;
+  width: 280px;
 }
 
 #kodol,
 #dekodol,
 #torol {
-    padding: 4px;
-    border-radius: 2px;
-    margin: 10px;
+  padding: 4px;
+  border-radius: 2px;
+  margin: 10px;
 }
 
 #torol {
-    width: 70px;
+  width: 70px;
 }
-
-
-
 
 /*MEDIA QUERY*/
 
 @media (min-width: 768px) {
+  .boxes {
+    display: flex;
+  }
 
-    .boxes {
-        display: flex;
-    }
+  #left {
+    flex-grow: 10;
+  }
 
-    #left {
-        flex-grow: 10;
-    }
+  #middle {
+    flex-grow: 1;
+  }
 
-    #middle {
-        flex-grow: 1;
-    }
-    
-    #right {
-        flex-grow: 10; 
-    }
+  #right {
+    flex-grow: 10;
+  }
 
-    #user_message,
-    #result_message {
-        height: 400px;
+  #user_message,
+  #result_message {
+    height: 400px;
+  }
 
-    }
+  header {
+    width: 98%;
+    margin: 10px auto 10px;
+    /* min-height: 40px; */
+    /* border: 1px solid black; */
+  }
 
-
-    header {
-        width: 98%;
-        margin: 10px auto 10px;
-        /* min-height: 40px; */
-        /* border: 1px solid black; */
-       
-    }
-
-    /*Miért kell ez a plusz div (dobozok), hogy az a nyomorult
+  /*Miért kell ez a plusz div (dobozok), hogy az a nyomorult
     tartalmat vertikálisan  középre tudjam igazítani??*/
-    .head {
-        width: 100%;
-        /* border: 1px solid black; */
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
+  .head {
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    header h1 {
-        font-size: 2.2rem;
-        letter-spacing: 5px;
-        font-weight: bold;
-    }
+  header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 5px;
+    font-weight: bold;
+  }
 
-    .head nav {
-        display: flex;
-        gap: 20px;
-        margin-right: 10px;
-       
-    }
+  .head nav {
+    display: flex;
+    gap: 20px;
+    margin-right: 10px;
+  }
 
+  .head nav a {
+    margin-bottom: 25px;
 
-    .head nav a {
-        margin-bottom: 25px;
-        
-        font-size: 1.3rem;
-
-    }
-
-
+    font-size: 1.3rem;
+  }
 }
